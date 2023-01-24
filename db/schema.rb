@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2023_01_22_112050) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "authors", force: :cascade do |t|
     t.text "name"
     t.text "image"
@@ -28,15 +31,22 @@ ActiveRecord::Schema.define(version: 2023_01_22_112050) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "genres", force: :cascade do |t|
-    t.text "name"
+  create_table "books_genres", id: false, force: :cascade do |t|
+    t.string "genre_id"
+    t.string "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "genres_books", id: false, force: :cascade do |t|
-    t.string "genre_id"
-    t.string "book_id"
+  create_table "books_libraries", id: false, force: :cascade do |t|
+    t.integer "library_id"
+    t.integer "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -44,13 +54,6 @@ ActiveRecord::Schema.define(version: 2023_01_22_112050) do
   create_table "libraries", force: :cascade do |t|
     t.text "title"
     t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "libraries_books", id: false, force: :cascade do |t|
-    t.integer "library_id"
-    t.integer "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

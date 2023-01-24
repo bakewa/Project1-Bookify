@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class SessionController < ApplicationController
     def new
     end
   
@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       user = User.find_by :email => params[:email]
       if user.present? && user.authenticate(params[:password])
         session[:user_id] = user.id
-        redirect_to root_path # IRL: send them somewhere better
+        redirect_to home_path # IRL: send them somewhere better
       else
         flash[:error] = "Invalid email or password"
         redirect_to login_path

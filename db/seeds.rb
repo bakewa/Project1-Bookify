@@ -36,10 +36,10 @@ puts "#{ Library.count} libraries"
 
 # Associations
 puts "Authors and Books"
-a1.books << s1
-a2.books << s2
-a3.books << s3
-a4.books << s4
+a1.books << b1
+a2.books << b2
+a3.books << b3
+a4.books << b4
 
 puts "Genres and Books"
 b1.genres << g5 << g6 

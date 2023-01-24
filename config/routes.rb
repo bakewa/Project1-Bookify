@@ -7,14 +7,7 @@ Rails.application.routes.draw do
 
   resources :authors, :only => [:index]
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  delete '/login' => 'sessions#destroy'
-
-  # get 'users/index'
-  # get 'users/new'
-  # get 'pages/home'
-  # get 'libraries/new'
-  # get 'books/show'
-  # get 'authors/show'
+  get '/login' => "session#new"
+  post '/login' => "session#create"
+  delete '/login' => "session#destroy"
 end
