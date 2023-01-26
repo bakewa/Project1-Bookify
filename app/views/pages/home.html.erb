@@ -1,7 +1,9 @@
-<h1>BOOK</h1>
+<h1>Welcome to Bookify</h1>
 
 <% if @current_user.present?%>
-
-<p>Welcome user: <%= @current_user.email %></p>
-
+    <p>Hello user: <%= @current_user.email %></p>
 <% end %>
+
+<p>
+    <a href="/books">Click here to search books</a>
+</p>

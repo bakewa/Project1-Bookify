@@ -11,3 +11,4 @@ class BooksController < ApplicationController
         @cover = info["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
     end
 end 
+    

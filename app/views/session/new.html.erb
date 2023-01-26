@@ -1,8 +1,8 @@
 <h1>Log In</h1>
 
-<p>
-    <%= flash[:error] %>
-</p>
+<% if flash[:error].present? %>
+    <p><%= flash[:error] %></p>
+<% end %>
 
 <%= form_tag login_path do %>
     <%= label_tag :email %>
@@ -11,5 +11,5 @@
     <%= label_tag :password %>
     <%= password_field_tag :password %>
 
-    <%= submit_tag 'Log in'  %>
+    <%= submit_tag "Sign In"  %>
 <% end %>

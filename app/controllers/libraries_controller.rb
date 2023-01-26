@@ -1,6 +1,9 @@
  class LibrariesController < ApplicationController
     before_action :check_for_login
 
+    def form
+    end 
+
     def new
         @library = Library.new
     end 
