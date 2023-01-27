@@ -1,0 +1,16 @@
+<h1>Edit Work</h1>
+
+<!-- <%= render :partial => 'form' %> -->
+
+<%= form_for :work do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+
+    <%= f.label :author_id %>
+    <%= f.select :author_id, Author.pluck(:name, :id), :include_blank => true %>
+
+    <%= f.submit %>
+<% end %>
