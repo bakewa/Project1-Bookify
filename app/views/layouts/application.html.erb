@@ -19,9 +19,9 @@
          <%= link_to 'Authors', authors_path %> 
         <%= link_to 'New Author', new_author_path %> 
         <%= link_to 'Works', works_path %>
-        <%= link_to 'New Work', new_work_path %> 
+      
 
-       
+<!-- If the current user is an admin, the All users will appear in the nav bar and they will be able to see all users currently signed up to the app -->
         <% if @current_user.present? %>
           <% if @current_user.admin? %> 
             <%= link_to "All users", users_path %> 
