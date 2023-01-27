@@ -21,12 +21,18 @@ Features Include:
 - Creating new authors that requires the user to enter the name and image of the new author. 
 - Creating new works that requires the user to enter the title and image of the new book and name of author. 
 
-# Errors/Blockers/What's not working
+# Errors/Blockers/What's not working 🚫
 - At the moment what's not really working is making the books (works) appear on the Works page and it instead a form for creating a new work appears instead.
 - Under the authors profile, instead of the book covers appearing under their name, its a duplicate image of the author.  
 
+# Learning Experience
+- Create a clear plan of what you want. E.g. what features you want. 
+- Before creating your app tables and migrations, be 100% certain of the type of data you want and map out your associations. 
+- By working through errors, I've slowly gained a clearer understanding of Ruby on Rails. 
+- Try not to work on your web apps til 2am.😅
+
 # Future Updates
-- In future updates I would like to be able to add a feature that allows the user to create different booklists and be able to add a book to whatever booklist they want. 
+- In future updates I would like to be able to add more features that allows the user to create different booklists and be able to add a book to whatever booklist they want. 
 - Ultimately I would love for the layout of this web application to resemble the Spotify layout just because I like Spotify. =)
 
 # Here is a link to my wireframe that will ultimately be my final product 
