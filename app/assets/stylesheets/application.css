@@ -1,15 +1,51 @@
 body {
-    background-image: url("https://i.pinimg.com/originals/65/3a/91/653a912fceab7eb5de03b0a7b7135b4e.gif");
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    margin-left: 250px;
+    color: white;
 }
 
 h2 {
     text-align: center;
 }
-.container {
-    max-width: 960px;
-    margin: 0 auto;
+.leftnav {
+    /* max-width: 960px;
+    margin: 0 auto; */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: auto;
+}
+
+.leftnav :hover {
+    color: white;
+}
+
+/* .leftnav a.active {
+    color: aqua;
+} */
+
+.topnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    outline: auto;
+}
+
+.topnav :hover {
+    color: white;
 }
 
 .thumb {

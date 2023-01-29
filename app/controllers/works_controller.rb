@@ -1,20 +1,17 @@
 class WorksController < ApplicationController
     before_action :check_for_login
 
-    def form
-    end 
-
     def index
         @works = Work.all
     end 
 
     def new 
-        @works = Work.new
+        @work = Work.new
     end
 
     def create 
         work = Work.create work_params
-        redirect_to authors_path
+        redirect_to work
     end
     
     def edit
@@ -34,7 +31,7 @@ class WorksController < ApplicationController
     def destroy
         work = Work.find params[:id]
         work.destroy
-        redirect_to authors_path
+        redirect_to works_path
       end
 
     private

@@ -1,5 +1,9 @@
 <h1>Works</h1>
 
-<% @work.each do |work| %>
-    <%= image_tag work.image, :class => 'thumb' if work.image.present? %>
+<ul>
+    <% @works.each do |work| %>
+        <li>
+            <%= image_tag work.image, :class => 'thumb' if work.image.present? %> 
+        </li>
     <% end %>
+</ul>

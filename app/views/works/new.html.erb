@@ -1,4 +1,4 @@
-<h1>New Work</h1>
+ <!-- <h1>New Work</h1>
 
 <%= form_for :work do |f| %>
 
@@ -10,5 +10,9 @@
     <%= f.label :author_id %>
     <%= f.select :author_id, Author.pluck(:name, :id), :include_blank => true %>
 
-    <%= f.submit %>
-<% end %>
+    <%= f.submit "Add Book" %>
+<% end %> -->
+
+<h2>New Work</h2>
+
+<%= render :partial => 'form' %>

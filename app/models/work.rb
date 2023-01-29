@@ -1,3 +1,3 @@
 class Work < ActiveRecord::Base
-    belongs_to :author, :optional => true
+    belongs_to :authors
 end

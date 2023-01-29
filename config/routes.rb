@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root :to => "pages#home" 
 
-  get '/works' => "works#form"
-  get '/works/info' => "works#info"
+  # get '/works' => "works#form"
+  # get '/works/info' => "works#info"
   post '/works/new' => "works#new"
   post '/authors' => "authors#new"
 
